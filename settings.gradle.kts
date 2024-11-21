@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "CrossingLife"
 include(":app")
- 
+include(":base:core")
+include(":base:databases")

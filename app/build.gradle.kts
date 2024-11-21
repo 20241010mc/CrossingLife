@@ -3,16 +3,19 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
+val vc = 1
+val vn = "1.0.0"
+
 android {
     namespace = "com.cl.crossinglife"
-    compileSdk = 34
+    compileSdk = libs.versions.cl.compileSdk.get().toIntOrNull()
 
     defaultConfig {
         applicationId = "com.cl.crossinglife"
-        minSdk = 26
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = libs.versions.cl.minSdk.get().toIntOrNull()
+        targetSdk = libs.versions.cl.compileSdk.get().toIntOrNull()
+        versionCode = vc
+        versionName = vn
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -61,6 +64,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.startup)
 
+    implementation(project(":base:core"))
 
 
     testImplementation(libs.junit)
