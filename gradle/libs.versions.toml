@@ -12,6 +12,7 @@ startUp = "1.2.0"
 appcompat = "1.6.1"
 material = "1.10.0"
 room_version = "2.6.1"
+ksp = "1.9.0-1.0.13"
 
 cl_compileSdk = "34"
 cl_minSdk = "26"
@@ -45,4 +46,5 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 androidx-room = { id = "androidx.room", version.ref = "room_version" }
+androidx-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 

@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.androidx.startup)
 
     implementation(project(":base:core"))
+    implementation(project(":base:databases"))
 
 
     testImplementation(libs.junit)
